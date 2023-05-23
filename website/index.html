@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9a30bf81da.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="images/logo-no-background.png" class="logo">
+            <ul>
+                <li><a href="#section1">Home</a></li>
+                <li><a href="#section2">About</a></li>
+                <li><a href="#section3">Types</a></li>
+                <li><a href="#section4">Artists</a></li>
+                <li><a href="#section5">Connect</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <section id="section1">
+            <div class="left-col">
+                <h1>THE<br>SMOOTHING<br>SOUND</h1>
+            </div>
+            <div class="right-col">
+                <p>Clich here to listen</p>
+                <img src="images/play.png" id="icon">
+            </div>
+            </section>
+    
+            <section id="section2">
+                <div class="heading">
+                    <h1>About</h1>
+                    <p>Music is the moonlight in the gloomy night of life</p>
+                </div>
+                <div class="about-us">
+                    <img src="music.jpg">
+                    <div class="about">
+                        <h2>Why listen music?</h2>
+                        <p>Music has a powerful effect on emotions. It can uplift spirits, provide comfort during challenging times, and help individuals process and express their feelings. Whether it's listening to joyful music to boost mood or finding solace in sad songs during times of sadness, music can help individuals regulate and navigate their emotions.Listening to music can be an effective way to reduce stress and promote relaxation.</p>
+                        <button class="read-more-btn">Read more</button>
+                    </div>
+                </div>
+            </section>
+            <section id="section3">
+                <div class="types">
+                    <div class="main-title">
+                        <h1>My music types</h1>
+                        <p>Types of music I like and how much I like it</p>
+                    </div>
+                    <div class="row">
+
+                        <div class="col">
+
+                            <div class="skills-container">
+
+                                <div class="skill">
+                                    <div class="subject">Popular music</div>
+                                    <div class="progress-bar" value="94%">
+                                        <div class="progress-line" style="max-width: 94%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill">
+                                    <div class="subject">Rock</div>
+                                    <div class="progress-bar" value="83%">
+                                        <div class="progress-line" style="max-width: 83%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill">
+                                    <div class="subject">Jazz</div>
+                                    <div class="progress-bar" value="88%">
+                                        <div class="progress-line" style="max-width: 88%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill">
+                                    <div class="subject">Classical music</div>
+                                    <div class="progress-bar" value="90%">
+                                        <div class="progress-line" style="max-width: 90%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col">
+
+                            <div class="skills-container">
+
+                                <div class="skill">
+                                    <div class="subject">Country music</div>
+                                    <div class="progress-bar" value="82%">
+                                        <div class="progress-line" style="max-width: 82%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill">
+                                    <div class="subject">Blues</div>
+                                    <div class="progress-bar" value="74%">
+                                        <div class="progress-line" style="max-width: 74%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill">
+                                    <div class="subject">Heavy metal</div>
+                                    <div class="progress-bar" value="63%">
+                                        <div class="progress-line" style="max-width: 63%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill">
+                                    <div class="subject">Hip hop</div>
+                                    <div class="progress-bar" value="80%">
+                                        <div class="progress-line" style="max-width: 80%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="section4">
+                <h2>Artists</h2>
+            </section>
+
+            <section id="section5">
+                <div class="hero">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" id="name" required>
+                            <label for="name"><i class="fa-solid fa-user"></i>Your name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="number" required>
+                            <label for="number"><i class="fa-solid fa-phone"></i>Phone No.</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" required>
+                            <label for="email"><i class="fa-solid fa-envelope"></i>Email Id</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" rows="5" required></textarea>
+                            <label for="message"><i class="fas fa-comments"></i>Your feedback</label>
+                        </div>
+                        <button type="submit">SUBMIT<i class="fas fa-paper-plane"></i></button>
+                    </form>  
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <audio id="mySong">
+        <source src="images/Doechii - What It Is (Lyrics) ft. Kodak Black(MP3_160K).mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("icon")
+
+        icon.onclick = function(){
+            if(mySong.paused){
+                mySong.play();
+                icon.src="images/pause-button.png";
+            }else{
+                mySong.pause();
+                icon.src = "images/play.png";
+            }
+        }
+    </script>
+</body>
+</html>
